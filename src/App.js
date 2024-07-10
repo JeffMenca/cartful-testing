@@ -1,21 +1,19 @@
-import './App.css';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Q2 from "./pages/Q2";
+import BaristaTransition from "./pages/BaristaTransition";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<BaristaTransition />} />
+          <Route path="*" element={<BaristaTransition />} />
+          <Route path="/q2" element={<Q2 />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
