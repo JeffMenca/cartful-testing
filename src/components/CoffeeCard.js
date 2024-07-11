@@ -1,3 +1,5 @@
+
+//asks for title, icon, color, rotation, translation, isOtherPressed, isSelected, and onClick props to determine change style or handle interaction
 const CoffeeCard = ({
   title,
   icon,

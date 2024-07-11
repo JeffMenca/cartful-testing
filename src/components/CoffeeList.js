@@ -1,10 +1,12 @@
 import CoffeeCard from "./CoffeeCard";
 import { useState } from "react";
 
+// ask for coffees, setCanContinue, and setCantContinue props to determine the coffee list, and the ability to continue or not and change style
 const CoffeeList = ({ coffees, setCanContinue, setCantContinue }) => {
   const [selectedCoffee, setSelectedCoffee] = useState(null);
   const isCoffessOddMobile = coffees.length % 2 !== 0;
 
+  // function to handle the coffee selection
   const handleCoffeeSelection = (coffee) => {
     if (selectedCoffee === coffee.title) {
       setSelectedCoffee(null);
@@ -17,6 +19,7 @@ const CoffeeList = ({ coffees, setCanContinue, setCantContinue }) => {
 
   return (
     <div>
+      {/* Coffee cards on desktop */}
       <div className="hidden lg:flex flex-row space-x-6">
         {coffees.map((coffee, index) => (
           <CoffeeCard
@@ -34,6 +37,7 @@ const CoffeeList = ({ coffees, setCanContinue, setCantContinue }) => {
           />
         ))}
       </div>
+      {/* Coffee cards on mobile*/}
       <div className="md:hidden grid grid-cols-2 gap-4">
         {coffees.map((coffee, index) => (
           <div
@@ -59,7 +63,7 @@ const CoffeeList = ({ coffees, setCanContinue, setCantContinue }) => {
           </div>
         ))}
       </div>
-
+      {/* Coffee cards on tablet */}
       <div className="hidden md:grid grid-cols-4 gap-4 lg:hidden">
         {coffees.map((coffee, index) => (
           <div
@@ -85,8 +89,6 @@ const CoffeeList = ({ coffees, setCanContinue, setCantContinue }) => {
           </div>
         ))}
       </div>
-
-      
     </div>
   );
 };
