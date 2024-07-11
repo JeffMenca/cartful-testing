@@ -8,7 +8,7 @@ const BaristaTransition = () => {
         <img src={mainLogo} alt="coffee" />
         <h2 className="text-[16px] md:text-[28px] text-center w-[150px] md:w-fit">We’ll find coffee that’s on your level.</h2>
       </div>
-      <div className="flex flex-row justify-end items-end h-[15%] md:mx-36 pb-6">
+      <div className="flex flex-row justify-end items-end h-[15%] mx-[-12] md:mx-12 lg:mx-36 pb-6">
         <NavigationButton text="Next >" url="/q2" />
       </div>
     </div>
